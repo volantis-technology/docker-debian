@@ -33,4 +33,4 @@ docker run -it --rm debian
 ## Maintainer
 
 Akrom Khasani
-> akrom <at> volantis <dot> io
+> akrom (at) volantis (dot) io
