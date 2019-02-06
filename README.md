@@ -1,6 +1,6 @@
-# docker-debian
-
 [![](https://img.shields.io/badge/GitHub-%E2%86%92-brightgreen.svg)](https://github.com/volantis-technology/docker-debian) [![](https://img.shields.io/badge/Docker%20Hub-%E2%86%92-blue.svg)](https://hub.docker.com/r/volantis/debian)
+
+# docker-debian
 
 ## Introduction
 
@@ -32,5 +32,6 @@ docker run -it --rm debian
 
 ## Maintainer
 
-Akrom Khasani
-> akrom (at) volantis (dot) io
+Akrom Khasani | `akrom (at) volantis (dot) io`
+
+[![](https://img.shields.io/badge/Made%20with%20&#9829;-@VolantisIO-ff69b4.svg)](https://volantis.io)
