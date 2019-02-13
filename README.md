@@ -1,6 +1,8 @@
-[![](https://img.shields.io/badge/GitHub-%E2%86%92-brightgreen.svg)](https://github.com/volantis-technology/docker-debian) [![](https://img.shields.io/badge/Docker%20Hub-%E2%86%92-blue.svg)](https://hub.docker.com/r/volantis/debian)
+[![](https://img.shields.io/badge/Docker%20Hub-%E2%86%92-blue.svg?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/r/volantis/debian)
 
-# docker-debian
+# Docker Debian
+
+[![](https://img.shields.io/badge/Debian-9%20(stretch)-red.svg?style=flat-square&logo=debian&logoColor=white)](https://www.debian.org)
 
 ## Introduction
 
@@ -16,9 +18,6 @@ Things that will be installed:
 ## How to build
 
 - clone this repo
-```bash
-git clone https://github.com/volantis-technology/docker-debian.git && cd docker-debian
-```
 
 - build the image
 ```bash
@@ -34,4 +33,4 @@ docker run -it --rm debian
 
 Akrom Khasani | `akrom (at) volantis (dot) io`
 
-[![](https://img.shields.io/badge/Made%20with%20&#9829;-@VolantisIO-ff69b4.svg)](https://volantis.io)
+[![](https://img.shields.io/badge/Made%20with%20&hearts;-@VolantisIO-orange.svg?style=flat-square)](https://volantis.io)

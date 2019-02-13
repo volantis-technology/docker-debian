@@ -17,7 +17,7 @@ ADD https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-${GOSU
 RUN chmod a+x /usr/local/bin/gosu-${GOSU_ARCH} && \
     ln -sf /usr/local/bin/gosu-${GOSU_ARCH} /usr/local/bin/gosu
 
-# Add apt-get-
+# Install apt-get-
 # (https://github.com/akr89/apt-get-)
 ADD https://raw.githubusercontent.com/akr89/apt-get-/master/apt-get-install \
     https://raw.githubusercontent.com/akr89/apt-get-/master/apt-get-remove \
@@ -25,7 +25,7 @@ ADD https://raw.githubusercontent.com/akr89/apt-get-/master/apt-get-install \
 RUN chmod a+x /usr/local/bin/apt-get-install && \
     chmod a+x /usr/local/bin/apt-get-remove
 
-# Install common tools
+# Install curl
 RUN apt-get-install curl
 
 # Add entrypoint
