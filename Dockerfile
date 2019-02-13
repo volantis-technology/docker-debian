@@ -25,6 +25,9 @@ ADD https://raw.githubusercontent.com/akr89/apt-get-/master/apt-get-install \
 RUN chmod a+x /usr/local/bin/apt-get-install && \
     chmod a+x /usr/local/bin/apt-get-remove
 
+# Add repo
+ADD ./sources.list /etc/apt/
+
 # Install curl
 RUN apt-get-install curl
 
