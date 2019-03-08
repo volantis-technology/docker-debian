@@ -18,8 +18,8 @@ ADD https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-${GOSU
     ./entrypoint.sh \
     /usr/local/bin/
 RUN useradd -mU -d /home/${DEFAULT_USER} ${DEFAULT_USER} && passwd -d ${DEFAULT_USER} && \
-    chmod a+x /usr/local/bin/gosu-${gosu_arch} && \
-    ln -sf /usr/local/bin/gosu-${gosu_arch} /usr/local/bin/gosu && \
+    chmod a+x /usr/local/bin/gosu-${GOSU_ARCH} && \
+    ln -sf /usr/local/bin/gosu-${GOSU_ARCH} /usr/local/bin/gosu && \
     chmod a+x /usr/local/bin/apt-get-install && \
     chmod a+x /usr/local/bin/apt-get-remove && \
     chmod a+x /usr/local/bin/entrypoint.sh
