@@ -9,32 +9,30 @@ ADD https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-${GOSU
     https://raw.githubusercontent.com/akr89/apt-get-/master/apt-get-install \
     https://raw.githubusercontent.com/akr89/apt-get-/master/apt-get-remove \
     ./entrypoint.sh \
-    /usr/local/bin/
-RUN mv /usr/local/bin/gosu-${GOSU_ARCH} /usr/local/bin/gosu && \
-    chmod a+x /usr/local/bin/gosu && \
-    chmod a+x /usr/local/bin/apt-get-install && \
-    chmod a+x /usr/local/bin/apt-get-remove && \
-    chmod a+x /usr/local/bin/entrypoint.sh
+    /opt/
+RUN mv /opt/gosu-${GOSU_ARCH} /opt/gosu && \
+    chmod a+x /opt/gosu && \
+    chmod a+x /opt/apt-get-install && \
+    chmod a+x /opt/apt-get-remove && \
+    chmod a+x /opt/entrypoint.sh
 
 
 FROM debian:stretch-slim
 
 LABEL maintainer="Akrom Khasani <akrom@volantis.io>"
 
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
-
-COPY --from=builder /usr/local/bin /usr/local/bin/
+COPY --from=builder /opt /usr/local/bin/
 
 # Add repo
 # Create default user
 # Install curl
 ADD ./sources.list /etc/apt/
-ENV DEFAULT_USER=user
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 DEFAULT_USER=user
 RUN useradd -mU -d /home/${DEFAULT_USER} ${DEFAULT_USER} && passwd -d ${DEFAULT_USER} && \
     apt-get-install curl
 
 # Set working directory
-VOLUME /tmp
+VOLUME [ "/tmp" ]
 WORKDIR /tmp
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
