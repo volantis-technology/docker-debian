@@ -32,7 +32,7 @@ RUN useradd -mU -d /home/${DEFAULT_USER} ${DEFAULT_USER} && passwd -d ${DEFAULT_
     apt-get-install curl
 
 # Set working directory
-VOLUME [ "/tmp" ]
+VOLUME /tmp
 WORKDIR /tmp
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
