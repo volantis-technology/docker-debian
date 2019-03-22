@@ -20,14 +20,14 @@ Things that will be installed:
 - clone this repo
 
 - build the image
-```bash
-docker build . -t debian
-```
+  ```bash
+  docker build . -t debian
+  ```
 
 - check by running the image
-```bash
-docker run -it --rm debian
-```
+  ```bash
+  docker run -it --rm debian
+  ```
 
 ## Maintainer
 
