@@ -10,7 +10,6 @@ This repo contains necesary files to build docker image for Debian Linux.
 
 Things that will be installed:
 
-- everything in [debian:stretch-slim](https://hub.docker.com/_/debian/)
 - [apt-get-{install|remove}](https://github.com/akr89/apt-get-)
 - [gosu](https://github.com/tianon/gosu)
 - [curl](https://packages.debian.org/stretch/curl)
@@ -21,12 +20,12 @@ Things that will be installed:
 
 - build the image
   ```bash
-  docker build . -t debian
+  docker build . -t volantis/debian
   ```
 
 - check by running the image
   ```bash
-  docker run -it --rm debian
+  docker run -it --rm volantis/debian cat /etc/os-release
   ```
 
 ## Maintainer
