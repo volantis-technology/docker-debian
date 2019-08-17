@@ -1,3 +1,5 @@
+# syntax = docker/dockerfile:1.1-experimental
+
 FROM debian:stretch-slim AS builder
 
 # Install gosu (https://github.com/tianon/gosu)
